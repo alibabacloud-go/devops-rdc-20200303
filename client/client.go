@@ -3353,7 +3353,7 @@ type GetPipelineInstHistoryResponseBodyDataDataList struct {
 	InstNumber       *int32                                                      `json:"InstNumber,omitempty" xml:"InstNumber,omitempty"`
 	Modifier         *string                                                     `json:"Modifier,omitempty" xml:"Modifier,omitempty"`
 	ModifyTime       *int64                                                      `json:"ModifyTime,omitempty" xml:"ModifyTime,omitempty"`
-	Packages         *string                                                     `json:"Packages,omitempty" xml:"Packages,omitempty"`
+	Packages         *[]string                                                   `json:"Packages,omitempty" xml:"Packages,omitempty"`
 	PipelineConfigId *int32                                                      `json:"PipelineConfigId,omitempty" xml:"PipelineConfigId,omitempty"`
 	PipelineId       *int32                                                      `json:"PipelineId,omitempty" xml:"PipelineId,omitempty"`
 	Status           *string                                                     `json:"Status,omitempty" xml:"Status,omitempty"`
@@ -3414,7 +3414,7 @@ func (s *GetPipelineInstHistoryResponseBodyDataDataList) SetModifyTime(v int64) 
 	return s
 }
 
-func (s *GetPipelineInstHistoryResponseBodyDataDataList) SetPackages(v string) *GetPipelineInstHistoryResponseBodyDataDataList {
+func (s *GetPipelineInstHistoryResponseBodyDataDataList) SetPackages(v []string) *GetPipelineInstHistoryResponseBodyDataDataList {
 	s.Packages = &v
 	return s
 }
@@ -3455,7 +3455,7 @@ type GetPipelineInstHistoryResponseBodyDataDataListFlowInstance struct {
 	Result           *GetPipelineInstHistoryResponseBodyDataDataListFlowInstanceResult   `json:"Result,omitempty" xml:"Result,omitempty" type:"Struct"`
 	ResultStatus     *string                                                             `json:"ResultStatus,omitempty" xml:"ResultStatus,omitempty"`
 	RunningStatus    *string                                                             `json:"RunningStatus,omitempty" xml:"RunningStatus,omitempty"`
-	StageTopo        *string                                                             `json:"StageTopo,omitempty" xml:"StageTopo,omitempty"`
+	StageTopo        *[][]string                                                         `json:"StageTopo,omitempty" xml:"StageTopo,omitempty"`
 	Stages           map[string]interface{}                                              `json:"Stages,omitempty" xml:"Stages,omitempty"`
 	Status           *string                                                             `json:"Status,omitempty" xml:"Status,omitempty"`
 	StatusName       *string                                                             `json:"StatusName,omitempty" xml:"StatusName,omitempty"`
@@ -3521,7 +3521,7 @@ func (s *GetPipelineInstHistoryResponseBodyDataDataListFlowInstance) SetRunningS
 	return s
 }
 
-func (s *GetPipelineInstHistoryResponseBodyDataDataListFlowInstance) SetStageTopo(v string) *GetPipelineInstHistoryResponseBodyDataDataListFlowInstance {
+func (s *GetPipelineInstHistoryResponseBodyDataDataListFlowInstance) SetStageTopo(v [][]string) *GetPipelineInstHistoryResponseBodyDataDataListFlowInstance {
 	s.StageTopo = &v
 	return s
 }
